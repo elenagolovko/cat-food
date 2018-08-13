@@ -1,0 +1,23 @@
+{
+  "name": "cat-shop",
+  "version": "1.0.0",
+  "description": "Test html/css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "4.16.0"
+  },
+  "dependencies": {},
+  "author": "Golovko Elena",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elenagolovko/cat-food.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elenagolovko/cat-food/issues"
+  },
+  "homepage": "https://github.com/elenagolovko/cat-food#readme"
+}

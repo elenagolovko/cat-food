@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Exo 2";
+  src: url('../../../../fonts/Exo20-Thin.eot') format('embedded-opentype'),
+  url("../../../../fonts/Exo2.0-Thin.otf") format("opentype"),
+  url('../../../../fonts/Exo2-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+.main__title {
+  font-family: "Exo 2", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 100;
+  margin: 55px 0 34px 0;
+  text-align: center;
+}

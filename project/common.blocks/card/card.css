@@ -1,0 +1,32 @@
+.card {
+  position: relative;
+  min-width: 320px;
+  background-image: url('../../../img/product-card.png');
+  background-repeat: no-repeat;
+  background-size: 320px 480px;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 61px;
+  height: 432px;
+ 
+  border-radius: 0 0 0 10px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  border-radius: 1px 9px 0 3px;
+  width: 273px;
+  height: 39px;
+  -webkit-transform: skew(-45deg);
+      -ms-transform: skew(-45deg);
+          transform: skew(-45deg);
+  top: 0;
+  right: 15px;
+  background-color: transparent;
+}

@@ -1,0 +1,22 @@
+.card_disabled{
+  border-right-color: #b3b3b3;
+  border-bottom-color: #b3b3b3;
+  background: -webkit-gradient(linear, left top, right top, color-stop(21%, transparent), color-stop(21%, rgba(255,255, 255, 0.5)));
+  background: -webkit-linear-gradient(left, transparent 21%, rgba(255,255, 255, 0.5) 21%);
+  background: -o-linear-gradient(left, transparent 21%, rgba(255,255, 255, 0.5) 21%);
+  background: linear-gradient(to right, transparent 21%, rgba(255,255, 255, 0.5) 21%);
+}
+
+.card_disabled::before {
+  border-left-color: #b3b3b3;
+  border-top-color: #b3b3b3;
+  background: -webkit-linear-gradient(225deg, transparent 80%, rgba(255,255, 255, 0.5) 67%);
+  background: -o-linear-gradient(225deg, transparent 80%, rgba(255,255, 255, 0.5) 67%);
+  background: linear-gradient(-135deg, transparent 80%, rgba(255,255, 255, 0.5) 67%);
+}
+
+.card_disabled::after {
+  border-left-color: #b3b3b3;
+  border-bottom-color: #b3b3b3;
+  background: rgba(255,255, 255, 0.5);
+}

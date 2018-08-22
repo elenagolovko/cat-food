@@ -1,0 +1,14 @@
+.card_hover {
+  border-right-color: #2ea8e6;
+  border-bottom-color: #2ea8e6;
+}
+
+.card_hover::before {
+  border-left-color: #2ea8e6;
+  border-top-color: #2ea8e6;
+}
+
+.card_hover::after {
+  border-left-color: #2ea8e6;
+  border-bottom-color: #2ea8e6;
+}

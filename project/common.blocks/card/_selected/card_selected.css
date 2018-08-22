@@ -1,0 +1,14 @@
+.card_selected {
+  border-right-color: #d91667;
+  border-bottom-color: #d91667;
+}
+
+.card_selected::before {
+  border-left-color: #d91667;
+  border-top-color: #d91667;
+}
+
+.card_selected::after {
+  border-left-color: #d91667;
+  border-bottom-color: #d91667;
+}

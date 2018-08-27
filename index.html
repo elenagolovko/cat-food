@@ -3,95 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles/bundle.css">
-  <link rel="preload" href="fonts/Exo2.0-Thin.otf" as="font">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Cat Food</title>
 </head>
 <body class="main"> 
-  <section class="main__container">
-    <h1 class="main__title">Ты сегодня покормил кота?</h1>
-    <section class="main__list">
-      <ul class="l-grid">
-        <li class="card l-grid__item card_default">
-          <!-- <a class="card__layer layer_default layer_disabled layer_selected" href="#"></a> -->
-          <div class="card__info">
-            <p class="card__title">Сказочное заморское яство</p>
-            <div class="card__name">
-              <p class="card__name_main">Нямушка</p>
-              <p class="card__name_adding">с фуа-гра</p>
-            </div>
-            <div class="card__description">
-              <p class="description__portions">
-                <span class="description__portions_number number_bold">10</span> порций
+  <main class="main__container">
+    <h1 class="visually-hidden">Страница товаров</h1>
+    <section class="main__content">
+      <h1 class="main__title">Ты сегодня покормил кота?</h1>
+      <section class="products">
+        <h2 class="visually-hidden">Товары</h2>
+        <ul class="products__list">
+          <li class="products__item">
+            <div class="product-card">
+              <div class="product-card__inner">
+                <a href="#" class="product-card__wrapper link link--wrapper">
+                  <div class="product-card__description card-description">
+                    <div class="product-card__top">
+                      <p class="product-card__title">Сказочное заморское яство</p>
+                      <div class="product-card__type">
+                        <p class="product-card__type--main">Нямушка</p>
+                        <p class="product-card__type--adding">с фуа-гра</p>
+                      </div>
+                    </div>
+                    <div class="product-card__additional">
+                      <p class="product-card__portions">
+                        <span class="product-card__portions-number text--bold">10</span> порций
+                      </p>
+                      <p class="product-card__present">мышь в подарок</p>
+                    </div>
+                    <div class="product-card__weight">
+                      <span class="product-card__weight-number">0,5</span>
+                      <p class="product-card__weight-text"> кг</p>
+                    </div> 
+                  </div>
+                </a>
+              </div>
+              <p class="product-card__buy-me buy-me--available">Чего сидишь? Порадуй котэ, 
+                <a href="#" class="product-card__link link">
+                  <span class="product-card__link--default">купи</span>.
+                </a>
               </p>
-              <p class="description__present">мышь в подарок</p>
-            </div>                       
-          </div> 
-          <div class="card__weight">
-            <span class="card__weight_number">0,5</span>
-            <p class="card__weight_text"> кг</p>
-          </div>         
-          <p class="card__buy-me buy-me_available">Чего сидишь? Порадуй котэ, 
-            <label class="buy-me__link"><span class="buy-me__link_default">купи</span>.</label>
-          </p>
-          <!-- <p class="card__buy-me buy-me_unavailable">Печалька, с фуа-гра закончился.</p> -->
-        </li>
-        <li class="card l-grid__item card_default">
-          <!-- <a class="card__layer layer_default layer_disabled layer_selected" href="#"></a> -->
-          <div class="card__info">
-            <p class="card__title">Сказочное заморское яство</p>
-            <div class="card__name">
-              <p class="card__name_main">Нямушка</p>
-              <p class="card__name_adding">с рыбой</p>
-            </div>
-            <div class="card__description">
-              <p class="description__portions">
-                <span class="description__portions_number number_bold">40</span> порций
+              <p class="product-card__buy-me buy-me--unavailable">Печалька, с фуа-гра закончился.</p>
+            </div>            
+          </li>
+          <li class="products__item">
+            <div class="product-card">
+              <div class="product-card__inner">
+                <a href="#" class="product-card__wrapper link link--wrapper">
+                  <div class="product-card__description card-description">
+                    <div class="product-card__top">
+                      <p class="product-card__title">Сказочное заморское яство</p>
+                      <div class="product-card__type">
+                        <p class="product-card__type--main">Нямушка</p>
+                        <p class="product-card__type--adding">с рыбой</p>
+                      </div>
+                    </div>
+                    <div class="product-card__additional">
+                      <p class="product-card__portions">
+                        <span class="product-card__portions-number text--bold">40</span> порций
+                      </p>
+                      <p class="product-card__presents">
+                        <span class="product-card__presents-number text--bold">2</span>мыши в подарок
+                      </p>
+                    </div>
+                    <div class="product-card__weight">
+                      <span class="product-card__weight-number">2</span>
+                      <p class="product-card__weight-text"> кг</p>
+                    </div> 
+                  </div>
+                </a>
+              </div>
+              <p class="product-card__buy-me buy-me--available">Чего сидишь? Порадуй котэ, 
+                <a href="#" class="product-card__link link">
+                  <span class="product-card__link--default">купи</span>.
+                </a>
               </p>
-              <p class="description__present">
-                <span class="present__number number_bold">2</span> мыши в подарок
+              <p class="product-card__buy-me buy-me--unavailable">Печалька, с рыбой закончился.</p>
+            </div>            
+          </li>
+          <li class="products__item">
+            <div class="product-card">
+              <div class="product-card__inner">
+                <a href="#" class="product-card__wrapper link link--wrapper">
+                  <div class="product-card__description card-description">
+                    <div class="product-card__top">
+                      <p class="product-card__title">Сказочное заморское яство</p>
+                      <div class="product-card__type">
+                        <p class="product-card__type--main">Нямушка</p>
+                        <p class="product-card__type--adding">с курой</p>
+                      </div>
+                    </div>
+                    <div class="product-card__additional">
+                      <p class="product-card__portions">
+                        <span class="product-card__portions-number text--bold">100</span> порций
+                      </p>
+                      <p class="product-card__presents">
+                        <span class="product-card__presents-number text--bold">5</span>мышей в подарок
+                      </p>
+                      <p class="product-card__bonus">заказчик доволен</p>
+                    </div>
+                    <div class="product-card__weight">
+                      <span class="product-card__weight-number">5</span>
+                      <p class="product-card__weight-text"> кг</p>
+                    </div> 
+                  </div>
+                </a>
+              </div>
+              <p class="product-card__buy-me buy-me--available">Чего сидишь? Порадуй котэ, 
+                <a href="#" class="product-card__link link">
+                  <span class="product-card__link--default">купи</span>.
+                </a>
               </p>
-            </div>                       
-          </div> 
-          <div class="card__weight">
-            <span class="card__weight_number">2</span>
-            <p class="card__weight_text"> кг</p>
-          </div>         
-          <p class="card__buy-me buy-me_available">Чего сидишь? Порадуй котэ, 
-            <label class="buy-me__link"><span class="buy-me__link_default">купи</span>.</label>
-          </p>
-          <!-- <p class="card__buy-me buy-me_unavailable">Печалька, с рыбой закончился.</p> -->
-        </li>
-        <li class="card l-grid__item card_default">
-          <!-- <a class="card__layer layer_default layer_disabled layer_selected" href="#"></a> -->
-          <div class="card__info">
-            <p class="card__title">Сказочное заморское яство</p>
-            <div class="card__name">
-              <p class="card__name_main">Нямушка</p>
-              <p class="card__name_adding">с курой</p>
-            </div>
-            <div class="card__description">
-              <p class="description__portions">
-                <span class="description__portions_number number_bold">100</span> порций
-              </p>
-              <p class="description__present">
-                <span class="present__number number_bold">5</span> мышей в подарок
-              </p>
-              <p class="description__additional">заказчик доволен</p>
-            </div>                       
-          </div> 
-          <div class="card__weight">
-            <span class="card__weight_number">5</span>
-            <p class="card__weight_text"> кг</p>
-          </div>         
-          <p class="card__buy-me buy-me_available">Чего сидишь? Порадуй котэ, 
-            <label class="buy-me__link"><span class="buy-me__link_default">купи</span>.</label>
-          </p>
-          <!-- <p class="card__buy-me buy-me_unavailable">Печалька, с курой закончился.</p> -->
-        </li>
-      </ul>
+              <p class="product-card__buy-me buy-me--unavailable">Печалька, с курой закончился.</p>
+            </div>            
+          </li>              
+        </ul>
+      </section>
     </section>
-  </section>
-  <!-- <script src="js/selected-hover.js"></script> -->
+  </main>
 </body>
 </html>

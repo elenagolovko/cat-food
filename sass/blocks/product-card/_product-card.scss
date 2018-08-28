@@ -1,0 +1,60 @@
+.product-card {
+  position: relative;
+  min-width: 320px;
+  min-height: 480px;
+  background-image: url('../img/card__image.png');
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-position: 49% 184%;
+  clip-path: polygon(0 9%,0 100%,100% 100%,100% 0,14% 0);
+  border: 5px solid;
+  border-radius: 8px;
+  transition: border-color 0.5s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3%;
+    left: -4%;
+    width: 61px;
+    height: 7px;
+    transform: rotate(-45deg);
+    transition: background-color 0.5s ease;
+  }
+
+  &--default {
+    border-color: #1698d9;
+
+    &::before {
+      background-color: #1698d9;
+    }
+  }
+
+  &__wrapper {
+    text-decoration: none;
+  }
+
+  &__title {
+    margin-top: 22px;
+    color: #666666;
+  }
+
+  &__additional {
+    color: #666666;
+  }
+
+  &__type {
+    @include font-param(map-get($font-stack, trebuchet-bold),map-get($font-weights, bold),16px,normal, #000000,24px);
+
+    &--main {
+      font-size: 48px;
+      margin: 22px 0 -4px -1px;    
+    }
+
+    &--adding {
+      margin-bottom: 17px;
+      font-size: 24px;
+    }
+  }
+
+}

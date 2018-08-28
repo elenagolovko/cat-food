@@ -1,0 +1,6 @@
+
+@include font-face("Exo 2", "exo2", "../fonts/", normal, 100, swap, (ttf: truetype));
+@include font-face("Trebuchet MS", "trebuchetMS", "../fonts/", normal, 400, swap, (ttf: truetype));
+@include font-face("Trebuchet MS Bold", "trebuchetMS-bold", "../fonts/", normal, 700, swap, (ttf: truetype));
+
+// @include font-face(Open Sans, "../fonts/", opensansbold, normal, 700, swap, null, null, (woff2: woff2, woff: woff));

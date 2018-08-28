@@ -1,0 +1,34 @@
+$font-stack: (
+  exo2: ("Exo 2", arial, sans-serif),
+  trebuchet: ("Trebuchet MS", arial, sans-serif),
+  trebuchet-bold: ("Trebuchet MS Bold", arial, sans-serif),
+);
+
+$font-weights: (
+  thin: 100,
+  regular: 400,
+  bold: 700
+);
+
+$font-size--xxxx-large: 53px !default;
+$font-size--xxx-large: 43px !default;
+$font-size--xx-large: 27px !default;
+$font-size--x-large: 25px !default;
+$font-size--large: 20px !default;
+$font-size--regular: 19px !default;
+$font-size--small: 18px !default;
+$font-size--smaller: 17px !default;
+$font-size--smallest: 15px !default;
+
+$font-sizes: (
+  base-m: $font-size--smallest,
+  base-t: $font-size--smaller,
+  base-d: $font-size--regular,
+  h2-m-s: $font-size--small,
+  h2-m: $font-size--x-large,
+  h2-m-l: $font-size--xx-large,
+  h2-t: $font-size--xxx-large,
+  h2-d: $font-size--xxxx-large,
+  other: $font-size--small,
+  other-l: $font-size--large
+);

@@ -1,0 +1,13 @@
+.products {
+  @include font-param(map-get($font-stack, trebuchet),map-get($font-weights, regular),16px,normal, #ffffff,20px);
+}
+
+  .products__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+  }

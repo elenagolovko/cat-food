@@ -1,0 +1,38 @@
+@mixin font-face(
+  $font-family,
+  $font-file-name,
+  $font-path: "../fonts/",
+  $font-style: normal,
+  $font-weight: 400,
+  $font-display: swap,
+  $font-formats: (eot: embedded-opentype, woff2: woff2, woff: woff, ttf: truetype, otf: opentype, svg: svg)) {
+  $font-src: ();
+  
+    @each $font-ext, $font-format in $font-formats {
+      $font-src: append($font-src, url("#{$font-path}#{$font-file-name}.#{$font-ext}") format("#{$font-format}"), comma);
+    }
+    @at-root {
+      @font-face {
+        font-family: $font-family;
+        src: $font-src;
+        font-style: $font-style;
+        font-weight: $font-weight;
+        font-display: $font-display;
+      }
+    }
+}
+
+@mixin font-param(
+  $family,
+  $weight,
+  $size: 36px,
+  $style: normal,
+  $color-f: white,
+  $line-height: 20px) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    line-height: $line-height;
+    color: $color-f;
+}

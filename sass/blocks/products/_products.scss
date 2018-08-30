@@ -1,5 +1,10 @@
 .products {
   @include font-param(map-get($font-stack, trebuchet),map-get($font-weights, regular),16px,normal, #ffffff,20px);
+
+  &__item {
+    position: relative;
+    padding-bottom: 85px;
+  }
 }
 
   .products__list {

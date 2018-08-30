@@ -15,7 +15,7 @@
 
   &__title {
     @include font-param(map-get($font-stack, exo2),map-get($font-weights, thin),36px,normal,white,24px);
-    // margin: 56px 0 36px 0;
+    margin: 45px 0 32px 0;
     text-align: center;
   }
 

@@ -36,3 +36,11 @@
     line-height: $line-height;
     color: $color-f;
 }
+
+@mixin centerer($top: null, $left: null, $transform: null) {
+  position: absolute;
+
+  top: $top;
+  left: $left;
+  transform: translate($transform);
+}

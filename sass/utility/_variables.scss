@@ -10,6 +10,14 @@ $font-weights: (
   bold: 700
 );
 
+$colors-c: (
+  default:#1698d9,
+  default-hovered:#2ea8e6,
+  selected: #d91667,
+  selected-hovered: #e62e7a,
+  disabled: #b3b3b3
+);
+
 $font-size--xxxx-large: 53px !default;
 $font-size--xxx-large: 43px !default;
 $font-size--xx-large: 27px !default;

@@ -9,7 +9,8 @@
   clip-path: polygon(0 9%,0 100%,100% 100%,100% 0,14% 0);
   border: 5px solid;
   border-radius: 8px;
-  border-color: #1698d9;
+  border-color: map-get($colors-c, default);
+  outline: none;
   transition: border-color 0.5s ease;
 
   &::before {
@@ -20,34 +21,56 @@
     width: 61px;
     height: 7px;
     transform: rotate(-45deg);
-    background-color: #1698d9;
+    background-color: map-get($colors-c, default);
     transition: background-color 0.5s ease;
   }
 
-  &:focus,
-  &:hover {
-    /* border-color: #2ea8e6; */
-    border-color: red;
+  &--default {
+    &:focus,
+    &:hover {
+      border-color: map-get($colors-c, default-hovered); 
+      cursor: pointer;
 
-    &::before {
-      background-color: red;
-      /* background-color: #2ea8e6; */
+      .product-card__weight {
+        background-color: map-get($colors-c, default-hovered);
+      }
+      
+      &::before {
+        background-color: map-get($colors-c, default-hovered); 
+      }
+    }
+
+    .product-card__weight {
+      background-color: map-get($colors-c, default);
     }
   }
 
-  &:focus-within {
-    border-color: aqua;
+  &--selected {
+    border-color: map-get($colors-c, selected);
 
     &::before {
-      background-color: aqua;
+      background-color: map-get($colors-c, selected);
     }
-    
-  }
 
-  &__wrapper {
-    text-decoration: none;
-  }
+    .product-card__weight {
+      background-color: map-get($colors-c, selected);
+    }
 
+    &:focus,
+    &:hover {
+      border-color: map-get($colors-c, selected-hovered);
+      cursor: pointer;
+
+      .product-card__weight {
+        background-color: map-get($colors-c, selected-hovered);
+      }
+      
+      &::before {
+        background-color: map-get($colors-c, selected-hovered);
+      }
+    }
+  }
+  
   &__inner {
     width: fit-content;
     margin: 16px 0 21px 46px;
@@ -89,48 +112,50 @@
     }
   }
 
-  &__weight {
-    position: absolute;
-    bottom: 12px;
-    right: 10px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #1698d9; 
-    transition: background-color 0.3s ease;
-    color: #ffffff;
-  }
-
-  &__weight-text {
-    position: inherit;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -19%;
-    font-size: 23px;
-  }
-
-  &__weight-number {
-    font-size: 42px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);//MIXIN CENTERER
-    margin-top: -18px;
-  }
-
   &__buy-me {
-    position: absolute;
+    @include centerer (null, 50%, (-50%, 0));
     width: 100%;
     text-align: center;
     margin: 0 0 3px -2px;
     bottom: 9%;
-    left: 50%;
     font-size: 13px;
-    transform: translateX(-50%);
 
     &--unavailable {
       visibility: hidden;
     }
   }
 
+  &__weight {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+  }
+
+  &__weight-text {
+    @include centerer (null, 50%, (-50%, 0));    
+    bottom: -19%;
+    font-size: 23px;
+  }
+
+  &__weight-number {
+    font-size: 42px;
+    @include centerer (50%, 50%, (-50%, 0));
+    margin-top: -18px;
+  }
+
+
+  &__button {
+    padding: 0;
+    color: map-get($colors-c, default);;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px map-get($colors-c, default) dashed;
+    background-color: transparent;
+  }
 }

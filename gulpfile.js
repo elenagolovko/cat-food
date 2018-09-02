@@ -1,19 +1,24 @@
-var gulp = require("gulp");
+var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 
-// var concatCss = require('gulp-concat-css');
-
-// gulp.task('default', function () {
-//   return gulp.src('project/**/*.css')
-//     .pipe(concatCss("styles/bundle.css"))
-//     .pipe(cleanCSS())
-//     .pipe(gulp.dest('css/'));
-// });
-
-gulp.task('default', function(){
-  return gulp.src('./sass/**/*.{scss,sass}')
-    .pipe(sass())
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('css/'));
+gulp.task('js', function (cb) {
+  pump([
+    gulp.src('js/*.js'),
+    uglify(),
+    gulp.dest('js/min')
+  ], cb);
 });
+
+gulp.task('css', function(cb){
+  pump([
+    gulp.src('./sass/**/*.{scss,sass}'),
+    sass(),
+    cleanCSS(),
+    gulp.dest('css/')
+  ], cb);
+});
+
+gulp.task('default', ['css','js']);

@@ -3,99 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preload" href="fonts/Exo2.0-Thin.otf" as="font">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Cat Food</title>
 </head>
-<body> 
-  <section class="main container">
-    <h1 class="main-title">Ты сегодня покормил кота?</h1>
-    <section class="products">
-      <ul class="products-list">
-        <li class="products-list__card products-list__card--disabled">
-          <input class="visually-hidden toggle-select product-1" type="checkbox" id="product-1" name="toggle">
-          <label class="products-list__card-layer layer--default layer--selected layer--disabled" for="product-1"></label>
-          <div class="card__product-info">
-            <p class="card-title">Сказочное заморское яство</p>
-            <div class="product-title">
-              <p class="product-title__main">Нямушка</p>
-              <p class="product-title__adding">с фуа-гра</p>
+<body class="main"> 
+  <main class="main__container">
+    <h1 class="visually-hidden">Страница товаров</h1>
+    <section class="main__content">
+      <h2 class="main__title">Ты сегодня покормил кота?</h2>
+      <section class="products">
+        <h2 class="visually-hidden">Товары</h2>
+        <ul class="products__list">
+          <li class="products__item">
+            <div class="product-card product-card--default" tabindex="0">
+              <div class="product-card__inner">
+                <div class="product-card__description card-description">
+                  <div class="product-card__top">
+                    <p class="product-card__title product-card__title--default">Сказочное заморское яство</p>
+                    <p class="product-card__title product-card__title--selected">Котэ не одобряет?</p>
+                    <div class="product-card__type">
+                      <p class="product-card__type--main">Нямушка</p>
+                      <p class="product-card__type--adding">с фуа-гра</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-card__additional">
+                  <p class="product-card__portions">
+                    <span class="product-card__portions-number">10</span> порций
+                  </p>
+                  <p class="product-card__present">мышь в подарок</p>
+                </div>
+                <div class="product-card__weight">
+                  <span class="product-card__weight-number">0,5</span>
+                  <p class="product-card__weight-text"> кг</p>
+                </div> 
+              </div>
+            </div> 
+            <p class="product-card__buy-me  product-card__buy-me--description visually-hidden">Печень утки разварная с артишоками.</p> 
+            <p class="product-card__buy-me product-card__buy-me--available">Чего сидишь? Порадуй котэ, 
+              <button class="product-card__button">купи.</button>
+            </p>
+            <p class="product-card__buy-me product-card__buy-me--unavailable visually-hidden">Печалька, с фуа-гра закончился.</p>           
+          </li>
+          <li class="products__item">
+            <div class="product-card product-card--default" tabindex="0">
+              <div class="product-card__inner">
+                <div class="product-card__description card-description">
+                  <div class="product-card__top">
+                    <p class="product-card__title product-card__title--default">Сказочное заморское яство</p>
+                    <p class="product-card__title product-card__title--selected">Котэ не одобряет?</p>
+                    <div class="product-card__type">
+                      <p class="product-card__type--main">Нямушка</p>
+                      <p class="product-card__type--adding">с рыбой</p>
+                    </div>
+                  </div>
+                  <div class="product-card__additional">
+                    <p class="product-card__portions">
+                      <span class="product-card__portions-number">40</span> порций
+                    </p>
+                    <p class="product-card__presents">
+                      <span class="product-card__presents-number">2 </span>мыши в подарок
+                    </p>
+                  </div>
+                  <div class="product-card__weight">
+                    <span class="product-card__weight-number">2</span>
+                    <p class="product-card__weight-text"> кг</p>
+                  </div> 
+                </div>
+              </div>
             </div>
-            <div class="product-description">
-              <p class="product-description__portions">
-                <span class="portions__number">10</span> порций
-              </p>
-              <p class="product-description__present">мышь в подарок</p>
-            </div>                       
-          </div>
-          <div class="product-weight">
-            <span class="product-weight__number">0,5</span>
-            <p class="product-weight__text"> кг</p>
-          </div>
-          <p class="card-description card-description--available">Чего сидишь? Порадуй котэ, 
-            <label for="product-1" class="card-link"><span class="card-link--default">купи</span>.</label>
-          </p>
-          <p class="card-description card-description--unavailable">Печалька, с фуа-гра закончился.</p>
-        </li>
-        <li class="products-list__card products-list__card--disabled">
-          <input class="visually-hidden toggle-select product-2" type="checkbox" id="product-2" name="toggle">
-          <label class="products-list__card-layer layer--default layer--selected layer--disabled" for="product-2"></label>
-          <div class="card__product-info">
-            <p class="card-title">Сказочное заморское яство</p>
-            <div class="product-title">
-              <p class="product-title__main">Нямушка</p>
-              <p class="product-title__adding">с рыбой</p>
-            </div>
-            <div class="product-description">
-              <p class="product-description__portions">
-                <span class="portions__number">40</span> порций
-              </p>
-              <p class="product-description__present">
-                <span class="present__number">2</span> мыши в подарок
-              </p>
-            </div>
-          </div>
-          <div class="product-weight">
-            <span class="product-weight__number">2</span>
-            <p class="product-weight__text"> кг</p>
-          </div>
-          <p class="card-description card-description--available">Чего сидишь? Порадуй котэ,
-            <label for="product-2" class="card-link"><span class="card-link--default">купи</span>.</label>
-          </p>
-          <p class="card-description card-description--unavailable">Печалька, с рыбой закончился.</p>
-        </li>
-        <li class="products-list__card products-list__card--disabled">
-          <input class="visually-hidden toggle-select product-3" type="checkbox" id="product-3" name="toggle">
-          <label class="products-list__card-layer layer--default layer--selected layer--disabled" for="product-3"></label>
-          <div class="card__product-info">
-            <p class="card-title">Сказочное заморское яство</p>
-            <div class="product-title">
-              <p class="product-title__main">Нямушка</p>
-              <p class="product-title__adding">с курой</p>
-            </div>
-            <div class="product-description">
-              <p class="product-description__portions">
-                <span class="portions__number">100</span> порций
-              </p>
-              <p class="product-description__present">
-                <span class="present__number">5</span> мышей в подарок
-              </p>
-              <p class="product__additional">заказчик доволен</p>
-            </div>
-          </div>
-          <div class="product-weight">
-            <span class="product-weight__number">5</span>
-            <p class="product-weight__text"> кг</p>
-          </div>
-          <p class="card-description card-description--available">Чего сидишь? Порадуй котэ,
-            <label for="product-3" class="card-link"><span class="card-link--default">купи</span>.</label>
-            <!-- можно ли несколько лэйблов на один чекбокс? Валидатор не ругался, но выглядит странновато... -->
-          </p>
-          <p class=" card-description card-description--unavailable">Печалька, с курой закончился.</p>
-        </li>
-      </ul>
+            <p class="product-card__buy-me product-card__buy-me--description visually-hidden">Головы щучьи с чесноком да свежайшая сёмгушка.</p> 
+            <p class="product-card__buy-me product-card__buy-me--available">Чего сидишь? Порадуй котэ, 
+              <button class="product-card__button">купи.</button>
+            </p>
+            <p class="product-card__buy-me product-card__buy-me--unavailable visually-hidden">Печалька, с рыбой закончился.</p>            
+          </li>
+          <li class="products__item">
+            <div class="product-card product-card--default" tabindex="0">
+                <div class="product-card__inner">
+                  <div class="product-card__description card-description">
+                    <div class="product-card__top">
+                      <p class="product-card__title product-card__title--default">Сказочное заморское яство</p>
+                      <p class="product-card__title product-card__title--selected">Котэ не одобряет?</p>
+                      <div class="product-card__type">
+                        <p class="product-card__type--main">Нямушка</p>
+                        <p class="product-card__type--adding">с курой</p>
+                      </div>
+                    </div>
+                    <div class="product-card__additional">
+                      <p class="product-card__portions">
+                        <span class="product-card__portions-number">100</span> порций
+                      </p>
+                      <p class="product-card__presents">
+                        <span class="product-card__presents-number">5 </span>мышей в подарок
+                      </p>
+                      <p class="product-card__bonus">заказчик доволен</p>
+                    </div>
+                    <div class="product-card__weight">
+                      <span class="product-card__weight-number">5</span>
+                      <p class="product-card__weight-text"> кг</p>
+                    </div> 
+                  </div>
+                </div>
+            </div> 
+            <p class="product-card__buy-me product-card__buy-me--description visually-hidden">Филе из цыплят с трюфелями в бульоне.</p> 
+            <p class="product-card__buy-me product-card__buy-me--available">Чего сидишь? Порадуй котэ, 
+              <button class="product-card__button">купи.</button>
+            </p>
+            <p class="product-card__buy-me product-card__buy-me--unavailable visually-hidden">Печалька, с курой закончился.</p>           
+          </li>              
+        </ul>
+      </section>
     </section>
-  </section>
-  <script src="js/selected-hover.js"></script>
+  </main>
+  <script src="js/min/product-card_states.js"></script>
 </body>
 </html>

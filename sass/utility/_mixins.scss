@@ -1,0 +1,63 @@
+@mixin font-face(
+  $font-family,
+  $font-file-name,
+  $font-path: "../fonts/",
+  $font-style: normal,
+  $font-weight: 400,
+  $font-display: swap,
+  $font-formats: (eot: embedded-opentype, woff2: woff2, woff: woff, ttf: truetype, otf: opentype, svg: svg)) {
+  $font-src: ();
+  
+    @each $font-ext, $font-format in $font-formats {
+      $font-src: append($font-src, url("#{$font-path}#{$font-file-name}.#{$font-ext}") format("#{$font-format}"), comma);
+    }
+    @at-root {
+      @font-face {
+        font-family: $font-family;
+        src: $font-src;
+        font-style: $font-style;
+        font-weight: $font-weight;
+        font-display: $font-display;
+      }
+    }
+}
+
+@mixin font-param(
+  $family,
+  $weight,
+  $size: 36px,
+  $style: normal,
+  $color-f: white,
+  $line-height: 20px) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    line-height: $line-height;
+    color: $color-f;
+}
+
+@mixin centerer($top: null, $left: null, $transform: null) {
+  position: absolute;
+
+  top: $top;
+  left: $left;
+  transform: translate($transform);
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}

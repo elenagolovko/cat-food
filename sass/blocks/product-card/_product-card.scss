@@ -1,0 +1,202 @@
+.product-card {
+  position: relative;
+  min-width: 312px;
+  min-height: 472px;
+  background-image: url('../img/card__image.png');
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-position: 49% 184%;
+  clip-path: polygon(0 9%,0 100%,100% 100%,100% 0,14% 0);
+  border: 5px solid;
+  border-radius: 8px;
+  border-color: map-get($colors-c, default);
+  outline: none;
+  transition: border-color 0.5s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3%;
+    left: -4%;
+    width: 61px;
+    height: 7px;
+    transform: rotate(-45deg);
+    background-color: map-get($colors-c, default);
+    transition: background-color 0.5s ease;
+  }
+
+  &--default {
+    &:focus,
+    &:hover {
+      border-color: map-get($colors-c, default-hovered); 
+      cursor: pointer;
+
+      .product-card__weight {
+        background-color: map-get($colors-c, default-hovered);
+      }
+      
+      &::before {
+        background-color: map-get($colors-c, default-hovered); 
+      }
+    }
+
+    .product-card__weight {
+      background-color: map-get($colors-c, default);
+    }
+  }
+
+  &--selected {
+    border-color: map-get($colors-c, selected);
+
+    &::before {
+      background-color: map-get($colors-c, selected);
+    }
+
+    .product-card__weight {
+      background-color: map-get($colors-c, selected);
+    }
+
+    &:focus,
+    &:hover {
+      border-color: map-get($colors-c, selected-hovered);
+      cursor: pointer;
+
+      .product-card__weight {
+        background-color: map-get($colors-c, selected-hovered);
+      }
+
+      .product-card__title--default {
+        @include visually-hidden();
+      }
+
+      .product-card__title--selected {
+        position: static;
+        visibility: visible;
+      }
+      
+      &::before {
+        background-color: map-get($colors-c, selected-hovered);
+      }
+    }
+  }
+
+  &--disabled {
+    border-color: map-get($colors-c, disabled);
+
+    .product-card__weight {
+      background-color: map-get($colors-c, disabled);
+    }
+
+    .product-card__title, .product-card__type, .product-card__additional  {
+      color: map-get($colors-c, disabled);
+    }
+
+    &::before {
+      background-color: map-get($colors-c, disabled);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      background: linear-gradient(to right,transparent 0%,rgba(255,255,255,.5) 0%);
+    }
+  }
+  
+  &__inner {
+    width: fit-content;
+    margin: 16px 0 21px 46px;
+  }
+
+  &__title {
+    margin: 0;
+    color: #666666;
+
+    &--selected {
+      position: absolute;
+      visibility: hidden;
+      color: map-get($colors-c, selected-hovered);
+    }
+  }
+
+  &__top {
+    margin-bottom: 20px;
+  }
+
+  &__additional {
+    color: #666666;
+
+    p {
+      font-size: 14px;
+      margin: 0 0 -4px -1px;
+    }
+  }
+
+  &__presents-number, &__portions-number {
+    @include font-param(map-get($font-stack, trebuchet-bold),map-get($font-weights, bold),14px,normal,null,16px);
+  }
+
+  &__type {
+    @include font-param(map-get($font-stack, trebuchet-bold),map-get($font-weights, bold),16px,normal, #000000,14px);
+
+    &--main {
+      font-size: 48px;
+      margin: 26px 0 -4px -1px;    
+    }
+
+    &--adding {
+      margin: 30px 0 0 0;
+      font-size: 24px;
+    }
+  }
+
+  &__buy-me {
+    @include centerer (null, 50%, (-50%, 0));
+    width: 100%;
+    text-align: center;
+    margin: 0 0 3px -2px;
+    bottom: 9%;
+    font-size: 13px;
+
+    &--unavailable {
+      color: #ffff66;
+    }
+  }
+
+  &__weight {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+  }
+
+  &__weight-text {
+    @include centerer (null, 50%, (-50%, 0));    
+    bottom: -19%;
+    font-size: 23px;
+  }
+
+  &__weight-number {
+    font-size: 42px;
+    @include centerer (50%, 50%, (-50%, 0));
+    margin-top: -18px;
+  }
+
+
+  &__button {
+    padding: 0;
+    color: map-get($colors-c, default);;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px map-get($colors-c, default) dashed;
+    background-color: transparent;
+  }
+}

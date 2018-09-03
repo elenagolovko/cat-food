@@ -1,0 +1,27 @@
+.main {
+  background: url('../img/background.png');
+  padding: 0;
+  margin: 0;
+
+  &__container {
+    width: 100%;
+    display: block;
+    @include centerer(50%, 50%, (-50%, -50%));
+
+    @media screen and (min-width: 1200px) {
+      max-width: 1280px;
+    }
+
+    @media screen and (max-width: 992px) {
+      margin: 0 auto;
+      @include centerer(0, 0, (0, 0));
+    }
+  }
+
+  &__title {
+    @include font-param(map-get($font-stack, exo2),map-get($font-weights, thin),36px,normal,white,24px);
+    margin: 45px 0 32px 0;
+    text-align: center;
+  }
+
+}

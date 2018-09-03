@@ -35,12 +35,13 @@
     }
   }
 
-  cards.forEach(function(card) {
-    card.addEventListener('click', handleCardClick);
-    card.addEventListener('keydown', handleCardKeyDown);
-  });
-
-  cardBuyButtons.forEach(function(button) {
-    button.addEventListener('click', handleCardButtonClick);
-  }); 
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].addEventListener('click', handleCardClick);
+    cards[i].addEventListener('keydown', handleCardKeyDown);
+    if (cards[i].classList.contains('product-card--disabled')) {
+      var buyMe = cards[i].nextElementSibling.nextElementSibling;
+      toggleElems(buyMe, buyMe.nextElementSibling, 'visually-hidden');
+    }
+    cardBuyButtons[i].addEventListener('click', handleCardButtonClick);
+  } 
 })();

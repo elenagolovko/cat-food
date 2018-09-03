@@ -79,6 +79,32 @@
       }
     }
   }
+
+  &--disabled {
+    border-color: map-get($colors-c, disabled);
+
+    .product-card__weight {
+      background-color: map-get($colors-c, disabled);
+    }
+
+    .product-card__title, .product-card__type, .product-card__additional  {
+      color: map-get($colors-c, disabled);
+    }
+
+    &::before {
+      background-color: map-get($colors-c, disabled);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      background: linear-gradient(to right,transparent 0%,rgba(255,255,255,.5) 0%);
+    }
+  }
   
   &__inner {
     width: fit-content;
@@ -110,7 +136,7 @@
   }
 
   &__presents-number, &__portions-number {
-    @include font-param(map-get($font-stack, trebuchet-bold),map-get($font-weights, bold),14px,normal, #666666,16px);
+    @include font-param(map-get($font-stack, trebuchet-bold),map-get($font-weights, bold),14px,normal,null,16px);
   }
 
   &__type {
@@ -134,6 +160,10 @@
     margin: 0 0 3px -2px;
     bottom: 9%;
     font-size: 13px;
+
+    &--unavailable {
+      color: #ffff66;
+    }
   }
 
   &__weight {
